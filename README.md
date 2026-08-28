@@ -93,6 +93,19 @@ This is evidence for a human decision, not the decision itself.
 | `PUBLICAML_TIMEOUT_MS` | `60000` | Per-request timeout. |
 | `PUBLICAML_TRACE_CONTINUES` | `2` | How many times an incomplete backward walk is resumed automatically. |
 
+## One-click desktop install
+
+The same server is also distributed as an MCPB bundle, which Claude Desktop
+installs with a double click and no JSON editing. Build it with:
+
+```
+npm run build:mcpb
+```
+
+The bundle lands in `dist/`. Version, description, licence and the tool list are
+read from `package.json` and from the server's own tool definitions, so the
+bundle cannot drift from the npm release.
+
 ## Development
 
 ```
