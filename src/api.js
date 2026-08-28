@@ -21,7 +21,7 @@ export class ApiError extends Error {
 }
 
 export async function post(path, body) {
-  const headers = { "Content-Type": "application/json", "User-Agent": "publicaml-mcp/0.1.0" };
+  const headers = { "Content-Type": "application/json", "User-Agent": "publicaml-mcp/0.1.1" };
   if (API_KEY) headers["X-API-Key"] = API_KEY;
 
   let res;

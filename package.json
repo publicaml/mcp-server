@@ -1,15 +1,40 @@
 {
   "name": "@publicaml/mcp-server",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "MCP server for PublicAML: screen a crypto address for AML risk, trace where its money came from or went, and list its counterparties. Bitcoin, Ethereum, BSC, Tron.",
+  "mcpName": "io.github.publicaml/mcp-server",
   "license": "MIT",
   "type": "module",
-  "bin": { "publicaml-mcp": "src/index.js" },
+  "bin": {
+    "publicaml-mcp": "src/index.js"
+  },
   "main": "src/index.js",
-  "files": ["src", "README.md", "LICENSE", "server.json"],
-  "engines": { "node": ">=20" },
-  "keywords": ["mcp", "modelcontextprotocol", "aml", "blockchain", "compliance", "sanctions", "ofac", "bitcoin", "ethereum", "tron", "bsc"],
-  "repository": { "type": "git", "url": "git+https://github.com/publicaml/mcp-server.git" },
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE",
+    "server.json"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "mcp",
+    "modelcontextprotocol",
+    "aml",
+    "blockchain",
+    "compliance",
+    "sanctions",
+    "ofac",
+    "bitcoin",
+    "ethereum",
+    "tron",
+    "bsc"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/publicaml/mcp-server.git"
+  },
   "homepage": "https://publicaml.org/api",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.12.0"

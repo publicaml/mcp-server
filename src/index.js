@@ -12,7 +12,7 @@ import { BASE_URL, API_KEY } from "./api.js";
 
 export const TOOLS = [screenAddress, traceFunds, listCounterparties];
 
-const VERSION = "0.1.0";
+const VERSION = "0.1.1";
 
 export function buildServer() {
   const server = new Server(
