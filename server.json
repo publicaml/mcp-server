@@ -1,7 +1,7 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.publicaml/mcp-server",
-  "description": "Screen a crypto address for AML risk, trace where its money came from or went, and list its counterparties. Bitcoin, Ethereum, BSC, Tron.",
+  "description": "AML screening for crypto addresses: risk, sanctions, fund tracing and counterparties.",
   "status": "active",
   "repository": {
     "url": "https://github.com/publicaml/mcp-server",
