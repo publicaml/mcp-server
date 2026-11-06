@@ -16,6 +16,10 @@ async function call(name, args) {
 
 await call("screen_address", { address: "0x67d40ee1a85bf4a4bb7ffae16de985e8427b6b45", chain: "ethereum" });
 await call("screen_address", { address: "TM2fQKjvwdUnCTkygPM4pxJKigHpMRr6Su" });
+// Solana, label-only, with a pending victim claim and a community incident.
+await call("screen_address", { address: "BmFdpraQhkiDQE6SnfG5omcA1VwzqfXrwtNYBwWTymy6" });
+// Curated incident (perpetrator) next to an unconfirmed community report.
+await call("screen_address", { address: "0x47666fab8bd0ac7003bce3f5c3585383f09486e2", chain: "ethereum" });
 await call("screen_address", { address: "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa" });
 await call("screen_address", { address: "bc1qxyz", chain: "ethereum" });
 await call("list_counterparties", {

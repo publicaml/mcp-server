@@ -1,6 +1,8 @@
+import { VERSION } from "./version.js";
+
 // Thin client over the PublicAML HTTP API.
 //
-// The API key is optional on purpose: /v1/enrich, /v1/source-trace and
+// The API key is optional on purpose: /v2/enrich, /v1/source-trace and
 // /v1/counterparties answer anonymously under an IP rate limit, so the server
 // is useful the moment it is installed. A key removes the limit and unlocks
 // /v1/trace, which is the one authenticated endpoint we expose.
@@ -21,7 +23,7 @@ export class ApiError extends Error {
 }
 
 export async function post(path, body) {
-  const headers = { "Content-Type": "application/json", "User-Agent": "publicaml-mcp/0.1.1" };
+  const headers = { "Content-Type": "application/json", "User-Agent": `publicaml-mcp/${VERSION}` };
   if (API_KEY) headers["X-API-Key"] = API_KEY;
 
   let res;
@@ -62,15 +64,24 @@ export async function post(path, body) {
     throw new ApiError("unauthorized", detail, { status: res.status, body: json });
   }
   if (res.status === 429) {
-    throw new ApiError(
-      "rate_limited",
-      "rate limit reached for anonymous use. Set PUBLICAML_API_KEY in the server config to lift it.",
-      { status: 429, body: json }
-    );
+    throw new ApiError("rate_limited", rateLimitMessage(res.headers), { status: 429, body: json });
   }
   if (res.status === 404) throw new ApiError("not_found", detail, { status: 404, body: json });
   if (res.status === 400 || res.status === 422) {
     throw new ApiError("bad_request", detail, { status: res.status, body: json });
   }
   throw new ApiError("http", detail, { status: res.status, body: json });
+}
+
+// When the limit resets, if the API said so. `Retry-After` and `RateLimit-Reset`
+// are both seconds from now.
+export function rateLimitMessage(headers) {
+  const raw = headers?.get?.("retry-after") ?? headers?.get?.("ratelimit-reset") ?? headers?.get?.("x-ratelimit-reset");
+  const secs = Number(raw);
+  const when = Number.isFinite(secs) && secs > 0
+    ? ` It resets in about ${secs < 90 ? `${Math.ceil(secs)} seconds` : `${Math.ceil(secs / 60)} minutes`}.`
+    : "";
+  return API_KEY
+    ? `rate limit reached for the configured API key.${when}`
+    : `rate limit reached for anonymous use (per IP).${when} Set PUBLICAML_API_KEY in the server config to lift it.`;
 }

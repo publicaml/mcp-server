@@ -59,11 +59,13 @@ const manifest = {
   version: pkg.version,
   description: pkg.description,
   long_description:
-    "Screen any Bitcoin, Ethereum, BNB Chain or Tron address for money-laundering " +
-    "risk without leaving your assistant.\n\n" +
+    "Screen any Bitcoin, Ethereum, BNB Chain, Tron or Solana address for " +
+    "money-laundering risk without leaving your assistant.\n\n" +
     "**screen_address** returns a risk level and score, sanctions status, issuer " +
     "freezes (Tether/Circle), what the address is — exchange, mixer, gambling " +
-    "site, bridge, personal wallet — and where its risk comes from.\n\n" +
+    "site, bridge, personal wallet — where its risk comes from, and the incidents " +
+    "it is named in with its role. A victim's unconfirmed report is shown as a " +
+    "report, never as the address's identity.\n\n" +
     "**trace_funds** walks the money one direction at a time: who funded a " +
     "wallet, or where its money went and at which exchange it left the chain.\n\n" +
     "**list_counterparties** enumerates who a wallet dealt with and classifies " +

@@ -1,0 +1,913 @@
+{
+ "sol_claim": {
+  "entities": [
+   {
+    "axes": {
+     "account_type": null,
+     "actor": null,
+     "asset_control": null,
+     "business": {
+      "affects_score": false,
+      "as_of": "2026-11-06T05:57:00.993815+00:00",
+      "basis": "community_claim",
+      "category": "exchange_deposit",
+      "claim_count": 1,
+      "claim_id": 1,
+      "confidence": null,
+      "confirmed": false,
+      "report_ref": "VR-AF7D0CD9",
+      "source": "community:victim-report",
+      "source_confidence": 0.05,
+      "source_rank": 5,
+      "stated_as": "KuCoin hot wallet",
+      "url": "https://publicaml.org/reports/VR-AF7D0CD9/"
+     },
+     "legal_status": null,
+     "membership": null,
+     "structure": null
+    },
+    "chain": "SOL",
+    "community_claims": [
+     {
+      "category": "exchange_deposit",
+      "claim_id": 1,
+      "confirmed": false,
+      "label": "KuCoin hot wallet",
+      "report_ref": "VR-AF7D0CD9",
+      "reported_at": "2026-11-06T05:57:00.993815+00:00",
+      "role": "recipient",
+      "source": "community:victim-report",
+      "source_confidence": 0.05,
+      "source_rank": 5,
+      "url": "https://publicaml.org/reports/VR-AF7D0CD9/"
+     }
+    ],
+    "first_block": null,
+    "incident_links": [
+     {
+      "link": "direct",
+      "role": "recipient",
+      "slug": "publicaml:vr-af7d0cd9"
+     }
+    ],
+    "incidents": [
+     {
+      "category": "other",
+      "implicates_address": false,
+      "link": "direct",
+      "name": "PublicAML community report VR-AF7D0CD9: Other",
+      "named_in_source": true,
+      "note": null,
+      "occurred_at": "2026-09-25",
+      "role": "recipient",
+      "slug": "publicaml:vr-af7d0cd9",
+      "sources": [
+       {
+        "archive_url": null,
+        "content_sha256": null,
+        "excerpt": "A fake SafePal Support agent on Telegram impersonated the real support team and ",
+        "names_addresses": true,
+        "published_at": "2026-09-25",
+        "publisher": null,
+        "tier": "social",
+        "title": "PublicAML community report VR-AF7D0CD9: Other",
+        "updated_at": null,
+        "url": "https://publicaml.org/reports/VR-AF7D0CD9/"
+       }
+      ],
+      "status": "alleged",
+      "stream": "community",
+      "summary": "A fake SafePal Support agent on Telegram impersonated the real support team and "
+     }
+    ],
+    "incidents_total": 1,
+    "label": "One of top 165k Solana accounts by activity (OrbitFlare)",
+    "label_basis": {
+     "as_of": "2026-10-19",
+     "confidence": 1.0,
+     "kind": "attribution",
+     "labels": [
+      "top 165k by activity"
+     ],
+     "reference": null,
+     "source": "orbitflare:activity-top",
+     "source_confidence": 0.1,
+     "stated_as": "One of top 165k Solana accounts by activity (OrbitFlare)"
+    },
+    "label_only": true,
+    "last_block": null,
+    "risk": {
+     "breakdown": null,
+     "level": null,
+     "policy_epoch": "ec58f67d707aa822",
+     "score": null,
+     "scored": false,
+     "unscorable_detail": "On SOL the score is computed from direct evidence only: attribution and direct risk seeds (sanctions, issuer freezes, incidents). Counterparties are shown from a one-hop wallet graph, but no risk is propagated from them, and this address has no seed of its own, so no risk score is computed. This is NOT a clean result.",
+     "unscorable_reason": "chain_label_only"
+    },
+    "wallet_address": "BmFdpraQhkiDQE6SnfG5omcA1VwzqfXrwtNYBwWTymy6"
+   }
+  ],
+  "not_found": [],
+  "request_id": "req_4eb9078a"
+ },
+ "eth_bybit": {
+  "entities": [
+   {
+    "axes": {
+     "account_type": null,
+     "actor": null,
+     "asset_control": null,
+     "business": {
+      "basis": "attribution",
+      "category": "hack",
+      "confidence": 0.95,
+      "source": "incident:news-pipeline",
+      "source_confidence": 0.9,
+      "source_rank": 90
+     },
+     "legal_status": null,
+     "membership": {
+      "anchor": null,
+      "basis": "attribution",
+      "category": "group-community",
+      "confidence": 0.5,
+      "group_id": "community:eth:c10",
+      "is_anchor": false,
+      "members": 646979,
+      "source": "p3_community",
+      "source_rank": 50
+     },
+     "structure": {
+      "basis": "attribution",
+      "category": "consolidation",
+      "confidence": 0.5461538461538462,
+      "source": "inline-pattern:sweep-intermediary",
+      "source_confidence": 0.5,
+      "source_rank": 50
+     }
+    },
+    "chain": "ETH",
+    "first_block": null,
+    "incident_links": [
+     {
+      "link": "direct",
+      "role": "perpetrator",
+      "slug": "bybit-cold-wallet-hack-21-feb-2025"
+     },
+     {
+      "link": "direct",
+      "role": "perpetrator",
+      "slug": "chainabuse:b87c8824-8f5c-434a-a595-b7b916f641ad"
+     },
+     {
+      "link": "propagated",
+      "role": null,
+      "slug": "bybit-cold-wallet-hack-21-feb-2025-2025-02"
+     },
+     {
+      "link": "propagated",
+      "role": null,
+      "slug": "unibtc-exploit"
+     },
+     {
+      "link": "propagated",
+      "role": null,
+      "slug": "phishing-address-etherscan-public-label-2022-02"
+     }
+    ],
+    "incidents": [
+     {
+      "category": "hack",
+      "implicates_address": true,
+      "link": "direct",
+      "name": "Bybit cold wallet hack (21 Feb 2025)",
+      "named_in_source": false,
+      "note": null,
+      "occurred_at": null,
+      "role": "perpetrator",
+      "slug": "bybit-cold-wallet-hack-21-feb-2025",
+      "sources": [
+       {
+        "archive_url": null,
+        "content_sha256": null,
+        "excerpt": "Bybit cold wallet exploiter: received the drained funds directly from Bybit's co",
+        "names_addresses": false,
+        "published_at": null,
+        "publisher": null,
+        "tier": "media",
+        "title": "Bybit cold wallet hack (21 Feb 2025)",
+        "updated_at": null,
+        "url": "https://www.ic3.gov/PSA/2025/PSA250226"
+       }
+      ],
+      "status": "confirmed",
+      "stream": "curated",
+      "summary": "Bybit cold wallet exploiter: received the drained funds directly from Bybit's co"
+     },
+     {
+      "category": "hack",
+      "implicates_address": false,
+      "link": "direct",
+      "name": "Chainabuse report: Hack",
+      "named_in_source": true,
+      "note": null,
+      "occurred_at": "2025-02-22",
+      "role": "perpetrator",
+      "slug": "chainabuse:b87c8824-8f5c-434a-a595-b7b916f641ad",
+      "sources": [
+       {
+        "archive_url": null,
+        "content_sha256": null,
+        "excerpt": "1.46B Bybit Hack Feb 2025",
+        "names_addresses": true,
+        "published_at": "2025-02-22",
+        "publisher": "Chainabuse",
+        "tier": "social",
+        "title": "Chainabuse report: Hack",
+        "updated_at": null,
+        "url": "https://chainabuse.com/report/b87c8824-8f5c-434a-a595-b7b916f641ad"
+       }
+      ],
+      "status": "alleged",
+      "stream": "community",
+      "summary": "1.46B Bybit Hack Feb 2025"
+     },
+     {
+      "category": "hack",
+      "implicates_address": false,
+      "link": "propagated",
+      "name": "Bybit cold wallet hack (21 Feb 2025)",
+      "named_in_source": false,
+      "note": null,
+      "occurred_at": "2025-02-21",
+      "role": null,
+      "slug": "bybit-cold-wallet-hack-21-feb-2025-2025-02",
+      "sources": [
+       {
+        "archive_url": null,
+        "content_sha256": null,
+        "excerpt": "Ethereum addresses which are holding or have held assets from the theft, operate",
+        "names_addresses": true,
+        "published_at": "2025-02-26",
+        "publisher": "FBI",
+        "tier": "law-enforcement",
+        "title": "North Korea Responsible for $1.5 Billion Bybit Hack",
+        "updated_at": null,
+        "url": "https://www.ic3.gov/PSA/2025/PSA250226"
+       },
+       {
+        "archive_url": null,
+        "content_sha256": null,
+        "excerpt": "Address carrying the Etherscan name tag \"ByBit Exploiter\" in the bybit-exploit l",
+        "names_addresses": false,
+        "published_at": "2025-02-21",
+        "publisher": null,
+        "tier": "media",
+        "title": "Bybit cold wallet hack (21 Feb 2025)",
+        "updated_at": null,
+        "url": "https://etherscan.io/accounts/label/bybit-exploit"
+       }
+      ],
+      "status": "confirmed",
+      "stream": "curated",
+      "summary": "Address carrying the Etherscan name tag \"ByBit Exploiter\" in the bybit-exploit l",
+      "via": {
+       "address": "0x55cca2f5eb07907696afe4b9db5102bce5feb734",
+       "hops": 1
+      }
+     },
+     {
+      "category": "hack",
+      "implicates_address": false,
+      "link": "propagated",
+      "name": "uniBTC exploit",
+      "named_in_source": false,
+      "note": null,
+      "occurred_at": null,
+      "role": null,
+      "slug": "unibtc-exploit",
+      "sources": [
+       {
+        "archive_url": null,
+        "content_sha256": null,
+        "excerpt": "Address carrying the Etherscan name tag \"uniBTC Exploiter 16\" in the unibtc-expl",
+        "names_addresses": false,
+        "published_at": null,
+        "publisher": null,
+        "tier": "media",
+        "title": "uniBTC exploit",
+        "updated_at": null,
+        "url": "https://etherscan.io/accounts/label/unibtc-exploit"
+       }
+      ],
+      "status": "confirmed",
+      "stream": "curated",
+      "summary": "Address carrying the Etherscan name tag \"uniBTC Exploiter 16\" in the unibtc-expl",
+      "via": {
+       "address": "0x959a90a6b88d19184ac7c46dfe43ff2968b12bd2",
+       "hops": 3
+      }
+     },
+     {
+      "category": "phishing",
+      "implicates_address": false,
+      "link": "propagated",
+      "name": "Phishing address (Etherscan public label)",
+      "named_in_source": false,
+      "note": null,
+      "occurred_at": "2022-02-20",
+      "role": null,
+      "slug": "phishing-address-etherscan-public-label-2022-02",
+      "sources": [
+       {
+        "archive_url": null,
+        "content_sha256": null,
+        "excerpt": "Address carrying the Etherscan public phishing label.",
+        "names_addresses": false,
+        "published_at": "2022-02-20",
+        "publisher": null,
+        "tier": "media",
+        "title": "Phishing address (Etherscan public label)",
+        "updated_at": null,
+        "url": "https://etherscan.io/labelcloud"
+       }
+      ],
+      "status": "confirmed",
+      "stream": "curated",
+      "summary": "Address carrying the Etherscan public phishing label.",
+      "via": {
+       "address": "0xd58ca904db555b67e78dbd94fbc3b81f68dcf76d",
+       "hops": 4
+      }
+     }
+    ],
+    "incidents_total": 2,
+    "label": "Bybit cold wallet hack (21 Feb 2025)",
+    "last_block": null,
+    "risk": {
+     "breakdown": {
+      "attributed_infra_by": {
+       "category": "consolidation",
+       "rank": 50
+      },
+      "behavioral_risk": null,
+      "direct_attribution": {
+       "category": "hack",
+       "score": 90.0,
+       "source": "incident:news-pipeline",
+       "source_confidence": 0.9
+      },
+      "direct_exposure": 90.0,
+      "entity_floor": {
+       "kept_direct": 90.0,
+       "overridden_by": {
+        "category": "hack",
+        "score": 90.0,
+        "source": "incident:news-pipeline",
+        "source_confidence": 0.9
+       },
+       "raw_score": 100.0,
+       "reason": "known consolidation — infrastructure, but this address is named directly by incident:news-pipeline: indirect exposure floored, direct kept"
+      },
+      "exposure_direction": "inbound",
+      "indirect_exposure": 0.0,
+      "propagated_sources": [
+       {
+        "category": "hack",
+        "collapsed_hops": 0,
+        "direction": "inbound",
+        "hops": 0,
+        "hops_economic": 0,
+        "reference": null,
+        "score": 90.0,
+        "severity": 90.0,
+        "source": "incident:news-pipeline",
+        "source_confidence": 0.9,
+        "source_kind": "investigation",
+        "source_rank": 90,
+        "src": "0x47666fab8bd0ac7003bce3f5c3585383f09486e2",
+        "src_label": "Bybit cold wallet hack (21 Feb 2025)",
+        "value_usd": null,
+        "via": null,
+        "via_label": null
+       },
+       {
+        "category": "hack",
+        "collapsed_hops": 0,
+        "direction": "inbound",
+        "hops": 1,
+        "hops_economic": 1,
+        "reference": "https://www.ic3.gov/PSA/2025/PSA250226",
+        "score": 63.0,
+        "severity": 90.0,
+        "source": "fbi:psa",
+        "source_confidence": 0.95,
+        "source_kind": "investigation",
+        "source_rank": 95,
+        "src": "0x55cca2f5eb07907696afe4b9db5102bce5feb734",
+        "src_label": "sweep-intermediary",
+        "value_usd": 639938.59369704,
+        "via": null,
+        "via_label": null
+       },
+       {
+        "category": "phishing",
+        "collapsed_hops": 0,
+        "direction": "inbound",
+        "hops": 2,
+        "hops_economic": 2,
+        "reference": null,
+        "score": 15.13,
+        "severity": 70.0,
+        "source": "blockscout:scam-tags",
+        "source_confidence": 0.5,
+        "source_kind": "feed",
+        "source_rank": 50,
+        "src": "0x249d27c875a686fcb557f14428a6cf2aeb89bd58",
+        "src_label": null,
+        "value_usd": 1655.325299336596,
+        "via": "0xe4edc5949e2c4ae75a7fd4953f3ff9bdf12bbc80",
+        "via_label": null
+       },
+       {
+        "category": "phishing",
+        "collapsed_hops": 0,
+        "direction": "inbound",
+        "hops": 2,
+        "hops_economic": 2,
+        "reference": null,
+        "score": 15.13,
+        "severity": 70.0,
+        "source": "blockscout:scam-tags",
+        "source_confidence": 0.5,
+        "source_kind": "feed",
+        "source_rank": 50,
+        "src": "0xc7870abf8b0d927e40b96bc8125ed2644691b27e",
+        "src_label": null,
+        "value_usd": 1655.325299336596,
+        "via": "0xe4edc5949e2c4ae75a7fd4953f3ff9bdf12bbc80",
+        "via_label": null
+       },
+       {
+        "category": "hack",
+        "collapsed_hops": 0,
+        "direction": "inbound",
+        "hops": 3,
+        "hops_economic": 3,
+        "reference": null,
+        "score": 30.87,
+        "severity": 90.0,
+        "source": "incident:news-pipeline",
+        "source_confidence": 0.9,
+        "source_kind": "investigation",
+        "source_rank": 90,
+        "src": "0x959a90a6b88d19184ac7c46dfe43ff2968b12bd2",
+        "src_label": "uniBTC exploit",
+        "value_usd": 156.48350884963847,
+        "via": "0x62a631ec4e541e7b7de90e7be01f09b88f671268",
+        "via_label": null
+       },
+       {
+        "category": "sanction",
+        "collapsed_hops": 0,
+        "direction": "inbound",
+        "hops": 4,
+        "hops_economic": 4,
+        "reference": null,
+        "score": 55.0,
+        "severity": 100.0,
+        "source": "ofac:sdn_advanced",
+        "source_confidence": 1.0,
+        "source_kind": "feed",
+        "source_rank": 100,
+        "src": "0xed6e0a7e4ac94d976eebfb82ccf777a3c6bad921",
+        "src_label": "Semenov Roman",
+        "value_usd": 156.48350884963847,
+        "via": "0x62a631ec4e541e7b7de90e7be01f09b88f671268",
+        "via_label": null
+       }
+      ]
+     },
+     "level": "CRITICAL",
+     "policy_epoch": "ec58f67d707aa822",
+     "score": 90.0,
+     "scored": true
+    },
+    "wallet_address": "0x47666fab8bd0ac7003bce3f5c3585383f09486e2"
+   }
+  ],
+  "not_found": [],
+  "request_id": "req_c30130bd"
+ },
+ "eth_chatex": {
+  "entities": [
+   {
+    "axes": {
+     "account_type": null,
+     "actor": null,
+     "asset_control": {
+      "assets": [
+       {
+        "freeze_block": 13583147,
+        "freeze_tx": "0x14a97060a7370f5c88573f7d01391f6767133cfa596be9e2985ff57c042dfc23",
+        "frozen_at": "2021-11-09T16:15:01Z",
+        "issuer": "circle",
+        "state": "frozen",
+        "token": "USDC"
+       },
+       {
+        "freeze_block": 18749904,
+        "freeze_tx": "0xd98d2633eb11bbac6955b6d58911ee45e4612efb352f4bcb3cf4063fc0cb98d5",
+        "frozen_at": "2023-12-09T16:36:47Z",
+        "issuer": "tether",
+        "state": "frozen",
+        "token": "USDT"
+       },
+       {
+        "freeze_block": 20492376,
+        "freeze_tx": "0xe7101be8aba411ea46c76dc85b537900edee254349d94a5dd5c93632d9a8e4da",
+        "frozen_at": "2024-08-09T16:56:23Z",
+        "issuer": "ripple",
+        "state": "frozen",
+        "token": "RLUSD"
+       }
+      ],
+      "basis": "attribution",
+      "category": "issuer-freeze",
+      "confidence": null,
+      "issuers": [
+       "circle",
+       "ripple",
+       "tether"
+      ],
+      "source": "circle:blacklist",
+      "source_confidence": 1.0,
+      "source_rank": 100
+     },
+     "business": {
+      "basis": "attribution",
+      "brand": {
+       "as_of": "2026-11-06",
+       "basis": "label",
+       "designated": true,
+       "detail": "/v1/brands/chatex",
+       "display_name": "Chatex",
+       "entity_id": 350,
+       "jurisdiction": {
+        "domicile_country": null,
+        "licence_countries": [],
+        "management_country": null,
+        "unchecked": []
+       },
+       "name_key": "chatex",
+       "reason": {
+        "count": 1,
+        "kind": "designation",
+        "score": 100,
+        "status": "active"
+       },
+       "risk_score": 100
+      },
+      "category": "cex",
+      "confidence": 0.99,
+      "role": "hot_wallet",
+      "role_source": "entities-discoverer",
+      "source": "entities-discoverer",
+      "source_confidence": 0.5,
+      "source_rank": 50
+     },
+     "legal_status": {
+      "basis": "attribution",
+      "category": "sanction",
+      "confidence": 0.8,
+      "designation": {
+       "as_of": "2026-11-05",
+       "authority": "OFAC",
+       "entity_name": "CHATEX",
+       "feed": "SDN_ADVANCED.XML",
+       "jurisdiction": "US",
+       "list": "SDN",
+       "reference_url": "https://sanctionslist.ofac.treas.gov/Home/SdnList",
+       "verified_against": "ofac:sdn_advanced"
+      },
+      "jurisdictions": [
+       "US"
+      ],
+      "source": "ofac:sdn_advanced",
+      "source_confidence": 1.0,
+      "source_rank": 100
+     },
+     "membership": null,
+     "structure": null
+    },
+    "chain": "ETH",
+    "first_block": null,
+    "incident_links": [
+     {
+      "link": "propagated",
+      "role": null,
+      "slug": "amir-capital-investment-scheme-eth-layering-wallet-2026-05"
+     },
+     {
+      "link": "propagated",
+      "role": null,
+      "slug": "phishing-address-etherscan-public-label-2022-02"
+     }
+    ],
+    "incidents": [
+     {
+      "category": "investment",
+      "implicates_address": false,
+      "link": "propagated",
+      "name": "Amir Capital investment scheme (ETH layering wallet)",
+      "named_in_source": false,
+      "note": null,
+      "occurred_at": "2026-05-01",
+      "role": null,
+      "slug": "amir-capital-investment-scheme-eth-layering-wallet-2026-05",
+      "sources": [
+       {
+        "archive_url": null,
+        "content_sha256": null,
+        "excerpt": "Intermediate layering wallet in the IF AMIR CAPITAL LTD (Cyprus, reg. HE 381574)",
+        "names_addresses": false,
+        "published_at": "2026-05-01",
+        "publisher": null,
+        "tier": "media",
+        "title": "Amir Capital investment scheme (ETH layering wallet)",
+        "updated_at": null,
+        "url": "https://publicaml.org/"
+       }
+      ],
+      "status": "confirmed",
+      "stream": "curated",
+      "summary": "Intermediate layering wallet in the IF AMIR CAPITAL LTD (Cyprus, reg. HE 381574)",
+      "via": {
+       "address": "0x5fc4b67f5f8e8fc879ec66f3e92900a7eb7f219e",
+       "hops": 2
+      }
+     },
+     {
+      "category": "phishing",
+      "implicates_address": false,
+      "link": "propagated",
+      "name": "Phishing address (Etherscan public label)",
+      "named_in_source": false,
+      "note": null,
+      "occurred_at": "2022-02-20",
+      "role": null,
+      "slug": "phishing-address-etherscan-public-label-2022-02",
+      "sources": [
+       {
+        "archive_url": null,
+        "content_sha256": null,
+        "excerpt": "Address carrying the Etherscan public phishing label.",
+        "names_addresses": false,
+        "published_at": "2022-02-20",
+        "publisher": null,
+        "tier": "media",
+        "title": "Phishing address (Etherscan public label)",
+        "updated_at": null,
+        "url": "https://etherscan.io/labelcloud"
+       }
+      ],
+      "status": "confirmed",
+      "stream": "curated",
+      "summary": "Address carrying the Etherscan public phishing label.",
+      "via": {
+       "address": "0x4399b72f939180be5ae01eaeb65e2327a2839b0d",
+       "hops": 4
+      }
+     }
+    ],
+    "incidents_total": 0,
+    "label": "CHATEX",
+    "last_block": null,
+    "risk": {
+     "breakdown": {
+      "attributed_infra_by": {
+       "category": "cex",
+       "rank": 50
+      },
+      "behavioral_risk": null,
+      "brand_direct": {
+       "basis": "label",
+       "detail": "/v1/brands/chatex",
+       "link_rank": 50,
+       "name_key": "chatex",
+       "reason": {
+        "count": 1,
+        "kind": "designation",
+        "score": 100,
+        "status": "active"
+       },
+       "score": 50.0,
+       "uncapped_score": 100.0
+      },
+      "direct_attribution": {
+       "category": "sanction",
+       "score": 100.0,
+       "source": "ofac:sdn_advanced",
+       "source_confidence": 1.0
+      },
+      "direct_exposure": 100.0,
+      "entity_floor": {
+       "kept_direct": 100.0,
+       "overridden_by": {
+        "category": "sanction",
+        "score": 100.0,
+        "source": "ofac:sdn_advanced",
+        "source_confidence": 1.0
+       },
+       "raw_score": 100.0,
+       "reason": "known cex — infrastructure, but this address is named directly by ofac:sdn_advanced: indirect exposure floored, direct kept"
+      },
+      "exposure_direction": "mixed",
+      "frozen_direct": {
+       "issuers": [
+        "circle",
+        "ripple",
+        "tether"
+       ],
+       "score": null,
+       "scored_as": "issuer-freeze",
+       "tokens": [
+        "RLUSD",
+        "USDC",
+        "USDT"
+       ]
+      },
+      "indirect_exposure": 0.0,
+      "outbound_direct": {
+       "category": "sanction",
+       "reason": "paid a designated counterparty; priced by that category's own ladder at one hop, the same number a hop-1 recipient would score",
+       "score": 90.0,
+       "source": "ofac:sdn_advanced",
+       "source_confidence": 1.0
+      },
+      "outbound_exposure": {
+       "count": 5,
+       "items": [
+        {
+         "category": "sanction",
+         "direction": "outbound",
+         "hops": 1,
+         "score": 90.0,
+         "source": "ofac:sdn_advanced",
+         "source_confidence": 1.0,
+         "src": "0x19aa5fe80d33a56d56c78e82ea5e50e5d80b4dff",
+         "value_usd": null,
+         "via": null,
+         "via_venue_deposit": null
+        }
+       ],
+       "max_score": 90.0,
+       "max_value_usd": null,
+       "reason": "this address paid a designated counterparty; a payment is the offence here, so it is reported on its own and does not enter the inbound exposure score"
+      },
+      "propagated_sources": [
+       {
+        "category": "sanction",
+        "collapsed_hops": 0,
+        "direction": "inbound",
+        "hops": 0,
+        "hops_economic": 0,
+        "reference": null,
+        "score": 100.0,
+        "severity": 100.0,
+        "source": "ofac:sdn_advanced",
+        "source_confidence": 1.0,
+        "source_kind": "feed",
+        "source_rank": 100,
+        "src": "0x67d40ee1a85bf4a4bb7ffae16de985e8427b6b45",
+        "src_label": "CHATEX",
+        "value_usd": null,
+        "via": null,
+        "via_label": null
+       },
+       {
+        "category": "mixer",
+        "collapsed_hops": 1,
+        "direction": "inbound",
+        "hops": 2,
+        "hops_economic": 1,
+        "reference": null,
+        "score": 80.0,
+        "severity": 80.0,
+        "source": "entities-discoverer:privacy",
+        "source_confidence": 0.8,
+        "source_kind": "feed",
+        "source_rank": 80,
+        "src": "0x0836222f2b2b24a3f36f98668ed8f0b38d1a872f",
+        "src_label": "Tornado.Cash",
+        "value_usd": 931.832598,
+        "via": "0x7e8248642f7c8555ab58b6e3a59e8c3de6e1b9f5",
+        "via_label": null
+       },
+       {
+        "category": "sanction",
+        "collapsed_hops": 0,
+        "direction": "inbound",
+        "hops": 2,
+        "hops_economic": 2,
+        "reference": null,
+        "score": 80.0,
+        "severity": 100.0,
+        "source": "ofac:sdn_advanced",
+        "source_confidence": 1.0,
+        "source_kind": "feed",
+        "source_rank": 100,
+        "src": "0x1999ef52700c34de7ec2b68a28aafb37db0c5ade",
+        "src_label": "Magomedov Khadzhi Murat Dalgatovich",
+        "value_usd": 10373.0,
+        "via": "0xd1cb699adefbd1f9fbe6a361717f078e4024368b",
+        "via_label": null
+       },
+       {
+        "category": "issuer-freeze",
+        "collapsed_hops": 0,
+        "direction": "inbound",
+        "hops": 2,
+        "hops_economic": 2,
+        "reference": null,
+        "score": 50.0,
+        "severity": 90.0,
+        "source": "tether:blacklist",
+        "source_confidence": 1.0,
+        "source_kind": "feed",
+        "source_rank": 100,
+        "src": "0x76f5fddaf53ac7a76a6596fa7aafb75f7e8eff7d",
+        "src_label": null,
+        "value_usd": 500000.0,
+        "via": "0xd1cb699adefbd1f9fbe6a361717f078e4024368b",
+        "via_label": null
+       },
+       {
+        "category": "investment",
+        "collapsed_hops": 0,
+        "direction": "inbound",
+        "hops": 2,
+        "hops_economic": 2,
+        "reference": null,
+        "score": 21.18,
+        "severity": 70.0,
+        "source": "incident:news-pipeline",
+        "source_confidence": 0.9,
+        "source_kind": "investigation",
+        "source_rank": 90,
+        "src": "0x5fc4b67f5f8e8fc879ec66f3e92900a7eb7f219e",
+        "src_label": "Amir Capital investment scheme (ETH layering wallet)",
+        "value_usd": 716593.3599999999,
+        "via": "0x513c0af3d208f34420d57e5ad8e36e6d3c3cfa89",
+        "via_label": null
+       },
+       {
+        "category": "phishing",
+        "collapsed_hops": 0,
+        "direction": "inbound",
+        "hops": 2,
+        "hops_economic": 2,
+        "reference": null,
+        "score": 15.13,
+        "severity": 70.0,
+        "source": "blockscout:scam-tags",
+        "source_confidence": 0.5,
+        "source_kind": "feed",
+        "source_rank": 50,
+        "src": "0x56b217cc582e19b3ca933fd411e85ca7def68445",
+        "src_label": "sweep-intermediary",
+        "value_usd": 262.3071,
+        "via": "0xfaaa105da871be9f03b380b608836c0ff3679fb7",
+        "via_label": null
+       }
+      ],
+      "sanction_direct": {
+       "designation": {
+        "as_of": "2026-11-05",
+        "authority": "OFAC",
+        "entity_name": "CHATEX",
+        "feed": "SDN_ADVANCED.XML",
+        "jurisdiction": "US",
+        "list": "SDN",
+        "reference_url": "https://sanctionslist.ofac.treas.gov/Home/SdnList",
+        "verified_against": "ofac:sdn_advanced"
+       },
+       "label": "sanction",
+       "score": 100.0,
+       "source": "ofac:sdn_advanced",
+       "source_confidence": 1.0
+      }
+     },
+     "level": "CRITICAL",
+     "policy_epoch": "ec58f67d707aa822",
+     "score": 100.0,
+     "scored": true
+    },
+    "wallet_address": "0x67d40ee1a85bf4a4bb7ffae16de985e8427b6b45"
+   }
+  ],
+  "not_found": [],
+  "request_id": "req_c30130bd"
+ }
+}

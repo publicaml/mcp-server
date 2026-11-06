@@ -1,6 +1,6 @@
 import { post, ApiError } from "../api.js";
 import { CHAINS, resolveChains } from "../chains.js";
-import { result, errorResult, addr, num, usd, USD_CAVEAT, CHAIN_COVERAGE_NOTES } from "../format.js";
+import { result, errorResult, addr, num, usd, USD_CAVEAT, CHAIN_COVERAGE_NOTES, isCommunityClaim } from "../format.js";
 
 const KINDS = ["personal", "venue", "hub", "deposit_wallet", "contract", "mint_burn", "unknown"];
 
@@ -70,8 +70,12 @@ export const definition = {
 function renderRow(c) {
   const bits = [addr(c.address)];
   if (c.kind) bits.push(c.kind);
-  if (c.label) bits.push(c.label);
-  else if (c.category) bits.push(c.category);
+  // The API resolves counterparty names from attribution tables only, where a
+  // pending victim claim cannot live. Guarded anyway: should one ever arrive
+  // signed `community_claim`, it is not printed as who the counterparty is.
+  const claimed = isCommunityClaim(c.category_basis) || isCommunityClaim(c.label_basis);
+  if (c.label && !claimed) bits.push(c.label);
+  else if (c.category && !claimed) bits.push(c.category);
   if (c.sanctioned) bits.push("SANCTIONED");
   if (c.risk_level) bits.push(`${c.risk_level} ${num(c.aml_score, 0) ?? "?"}`);
 

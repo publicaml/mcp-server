@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { resolveChains, candidateChains, normalizeChain } from "../src/chains.js";
+import { resolveChains, candidateChains, normalizeChain, base58Length, SCREEN_CHAINS } from "../src/chains.js";
 import { TOOLS } from "../src/index.js";
 import * as counterparties from "../src/tools/list_counterparties.js";
 
@@ -9,7 +9,8 @@ test("short forms normalise to canonical chains", () => {
   assert.equal(normalizeChain("BNB"), "bsc");
   assert.equal(normalizeChain("TRX"), "tron");
   assert.equal(normalizeChain("btc"), "bitcoin");
-  assert.equal(normalizeChain("solana"), null);
+  assert.equal(normalizeChain("SOL"), "solana");
+  assert.equal(normalizeChain("dogecoin"), null);
 });
 
 test("address format narrows the chain, and 0x stays ambiguous", () => {
@@ -20,6 +21,21 @@ test("address format narrows the chain, and 0x stays ambiguous", () => {
   assert.deepEqual(candidateChains("not-an-address"), []);
 });
 
+test("solana is told from legacy bitcoin by decoded length, not by shape", () => {
+  assert.deepEqual(candidateChains("BmFdpraQhkiDQE6SnfG5omcA1VwzqfXrwtNYBwWTymy6"), ["solana"]);
+  // 32 characters of '1' = 32 zero bytes: the Solana system program, and also
+  // a string the legacy-bitcoin shape alone would have accepted.
+  assert.deepEqual(candidateChains("11111111111111111111111111111111"), ["solana"]);
+  assert.deepEqual(candidateChains("3J98t1WpEZ73CNmQviecrnyiWrnqRhWNLy"), ["bitcoin"]);
+  assert.equal(base58Length("1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa"), 25);
+});
+
+test("solana is screen_address only; the graph tools refuse it with a reason", () => {
+  assert.deepEqual(resolveChains("BmFdpraQhkiDQE6SnfG5omcA1VwzqfXrwtNYBwWTymy6", null, SCREEN_CHAINS).chains, ["solana"]);
+  assert.match(resolveChains("BmFdpraQhkiDQE6SnfG5omcA1VwzqfXrwtNYBwWTymy6").error, /does not cover/);
+  assert.match(resolveChains("BmFdpraQhkiDQE6SnfG5omcA1VwzqfXrwtNYBwWTymy6", "solana").error, /screen_address only/);
+});
+
 test("an explicit chain always wins over detection", () => {
   const r = resolveChains("0x67d40ee1a85bf4a4bb7ffae16de985e8427b6b45", "BSC");
   assert.deepEqual(r.chains, ["bsc"]);
@@ -28,7 +44,7 @@ test("an explicit chain always wins over detection", () => {
 
 test("an unresolvable chain is an error, never a default", () => {
   assert.match(resolveChains("garbage").error, /cannot tell which chain/);
-  assert.match(resolveChains("0xabc", "solana").error, /unknown chain/);
+  assert.match(resolveChains("0xabc", "dogecoin").error, /unknown chain/);
 });
 
 test("every tool declares a name, description and object schema", () => {
